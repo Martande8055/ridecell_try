@@ -38,5 +38,6 @@ jobs:
       with:
         image: yes8055/guestbook
         registry: docker.io
+        tags: v1, latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
