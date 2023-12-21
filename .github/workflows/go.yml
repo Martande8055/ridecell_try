@@ -15,7 +15,10 @@ on:
 jobs:
 
   build:
-    if: "contains(github.event.head_commit.message, 'BUILD_CONTAINER_IMAGE')"
+    if: |
+      (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) ||
+      contains(github.event.head_commit.message, 'BUILD_CONTAINER_IMAGE')
+    
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
