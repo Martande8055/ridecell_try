@@ -24,12 +24,12 @@ import (
 
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
-	"github.com/xyproto/simpleredis"
+	"github.com/xyproto/simpleredis/v2"
 )
 
 var (
-	masterPool *simpleredis.ConnectionPool
-	replicaPool  *simpleredis.ConnectionPool
+	masterPool  *simpleredis.ConnectionPool
+	replicaPool *simpleredis.ConnectionPool
 )
 
 func ListRangeHandler(rw http.ResponseWriter, req *http.Request) {
