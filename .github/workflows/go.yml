@@ -36,11 +36,14 @@ jobs:
     - name: Build
       run: go build -v ./...
 
+    - name: Increment build counter
+      run: echo $(( $(cat build_number.txt) + 1 )) > build_number.txt
+
     - name: build and push docker image to docker hub
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: yes8055/guestbook
         registry: docker.io
-        tags: v1, latest
+        tags: ${{ 'v' +$(cat build_number.txt) }}, latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }} 
