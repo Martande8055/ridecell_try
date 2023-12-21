@@ -28,7 +28,7 @@ jobs:
       with:
         go-version: '1.21.3'  
 
-    - name: Install dependencies
+    - name: Install dependencies  
       run: |
           go get github.com/codegangsta/negroni
           go get github.com/gorilla/mux
