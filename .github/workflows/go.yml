@@ -44,6 +44,6 @@ jobs:
       with:
         image: yes8055/guestbook
         registry: docker.io
-        tags: ${{ 'v' +$(cat build_number.txt) }}, latest
+        tags: ${{ 'v' + $(cat build_number.txt) }}, latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }} 
