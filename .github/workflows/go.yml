@@ -45,5 +45,5 @@ jobs:
         image: yes8055/guestbook
         registry: docker.io
         addLatest: true
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: ${{ secrets.DOCKER_USERNAME }}  
         password: ${{ secrets.DOCKER_PASSWORD }} 
