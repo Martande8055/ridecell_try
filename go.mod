@@ -1,6 +1,6 @@
 module github.com/Martande8055/ridecell_try
 
-go 1.21.3
+go 1.23
 
 require (
 	github.com/codegangsta/negroni v1.0.0
