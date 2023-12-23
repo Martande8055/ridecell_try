@@ -59,7 +59,7 @@ jobs:
 ```sh
 git clone https://github.com/Martande8055/RidecellAssignment.git
 ```
-2. Run the following on your Kubernetes cluster commands, 
+2. Run the following commands on your Kubernetes cluster.
 ```sh
 kubectl create -f redis-master-controller.yaml
 kubectl create -f redis-master-service.yaml
