@@ -3,7 +3,7 @@
 </div>
 
 ## ✨ Approach
-### 1) Created a new GitHub public Repository from [Repository](https://github.com/kubernetes/examples/tree/master/guestbook-go)
+### 1) Created a new GitHub public Repository from [Repository Link](https://github.com/kubernetes/examples/tree/master/guestbook-go)
 ### 2) Created a container image using the GitHub Action workflow for the above project and Pushed that image to the docker hub.
 #### i. Prevented merging anything in the main branch without review.
 ![image](https://github.com/Martande8055/ridecell_try/assets/88831689/6eb0e1dd-e939-4434-a61c-8a1104106e5f)
@@ -53,10 +53,12 @@ jobs:
 
 
 
-### Deploy container image to Kubernetes cluster
+### Steps Deploy container image to Kubernetes cluster
 
-1. Clone this GitHub Repo i.e (https://github.com/Martande8055/RidecellAssignment.git)
-
+1. Clone this GitHub Repo i.e [Guestbook-Go](https://github.com/Martande8055/RidecellAssignment.git)
+```sh
+git clone https://github.com/Martande8055/RidecellAssignment.git
+```
 2. Run Kubernetes following commands, 
 ```sh
 kubectl create -f redis-master-controller.yaml
@@ -66,11 +68,15 @@ kubectl create -f redis-replica-service.yaml
 kubectl create -f guestbook-controller.yaml
 kubectl create -f guestbook-service.yaml
 ```
-3. 
+3. Run following command to get URL
+```sh
+minikube service guestbook
+```
 
 #### 🎉 Result
 ![image](https://github.com/Martande8055/ridecell_try/assets/88831689/8363a4d8-e365-4863-a5f7-e7e604b8f165)
 
+![image](https://github.com/Martande8055/ridecell_try/assets/88831689/75b2e838-311b-494c-94e4-ad064505d37e)
 
 
 <!-- Comment to change code and test workflow: 6 -->
